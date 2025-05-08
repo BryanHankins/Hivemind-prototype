@@ -1,0 +1,33 @@
+Hivemind Client Instructions - Client #1
+
+Step-by-Step Guide to Connect to Hivemind Server
+
+1. Ensure this laptop is connected to the SAME Wi-Fi or LAN network as the HivemindServer host.
+
+2. Open the HivemindClient folder in Visual Studio Code or terminal.
+
+3. Edit the HivemindClient.cs file:
+   Locate the following line:
+       const string serverIP = "127.0.0.1";
+   Replace it with:
+       const string serverIP = "192.168.1.42";
+
+   (This is the LAN IP of the main laptop running HivemindServer)
+
+4. Save the file.
+
+5. Open a terminal in the HivemindClient folder and build the project:
+       dotnet build
+
+6. Run the client:
+       dotnet run
+
+7. Type messages and press Enter to send.
+   Type '/exit' to disconnect.
+
+If the connection fails:
+- Double-check the server IP
+- Ensure the server is running and listening on port 5000
+- Make sure firewall settings on the server allow incoming TCP on port 5000
+
+Happy messaging with the Hive!

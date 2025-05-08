@@ -1,0 +1,14 @@
+C:\code\Csharp\HivemindServer\HivemindClient\bin\Debug\net8.0\HivemindClient.exe
+C:\code\Csharp\HivemindServer\HivemindClient\bin\Debug\net8.0\HivemindClient.deps.json
+C:\code\Csharp\HivemindServer\HivemindClient\bin\Debug\net8.0\HivemindClient.runtimeconfig.json
+C:\code\Csharp\HivemindServer\HivemindClient\bin\Debug\net8.0\HivemindClient.dll
+C:\code\Csharp\HivemindServer\HivemindClient\bin\Debug\net8.0\HivemindClient.pdb
+C:\code\Csharp\HivemindServer\HivemindClient\obj\Debug\net8.0\HivemindClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\code\Csharp\HivemindServer\HivemindClient\obj\Debug\net8.0\HivemindClient.AssemblyInfoInputs.cache
+C:\code\Csharp\HivemindServer\HivemindClient\obj\Debug\net8.0\HivemindClient.AssemblyInfo.cs
+C:\code\Csharp\HivemindServer\HivemindClient\obj\Debug\net8.0\HivemindClient.csproj.CoreCompileInputs.cache
+C:\code\Csharp\HivemindServer\HivemindClient\obj\Debug\net8.0\HivemindClient.dll
+C:\code\Csharp\HivemindServer\HivemindClient\obj\Debug\net8.0\refint\HivemindClient.dll
+C:\code\Csharp\HivemindServer\HivemindClient\obj\Debug\net8.0\HivemindClient.pdb
+C:\code\Csharp\HivemindServer\HivemindClient\obj\Debug\net8.0\HivemindClient.genruntimeconfig.cache
+C:\code\Csharp\HivemindServer\HivemindClient\obj\Debug\net8.0\ref\HivemindClient.dll

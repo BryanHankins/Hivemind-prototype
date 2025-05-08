@@ -1,0 +1,73 @@
+==============================
+ Hivemind Chat System (C# .NET)
+==============================
+
+This guide explains how to run BOTH the server (HivemindMain.cs) and clients (HivemindClient.cs) using .NET and Visual Studio Code.
+
+==============================
+ Requirements
+==============================
+- .NET 6 or .NET 7 SDK installed
+- Visual Studio Code (recommended)
+- C# extension for VS Code
+- All machines must be on the same Wi-Fi / LAN
+
+==============================
+ Server Setup (Main Laptop)
+==============================
+1. Create a folder: HivemindServer
+2. Place your fixed HivemindMain.cs inside it
+3. Open terminal in this folder and run:
+
+   dotnet new console --force
+   (this will create a .csproj and Program.cs — replace Program.cs with HivemindMain.cs)
+
+4. Run the server:
+
+   dotnet run
+
+5. The server will display:
+
+   [+] Hive Mind Main Node listening on port 5000
+
+==============================
+ Find Server IP Address
+==============================
+On the SERVER laptop, run:
+
+   ipconfig (Windows)
+   ifconfig (macOS/Linux)
+
+Look for: IPv4 Address (e.g., 192.168.1.42)
+
+==============================
+ Client Setup (Other Laptops)
+==============================
+1. Create a folder: HivemindClient
+2. Place your HivemindClient.cs file inside it
+3. Open terminal in this folder and run:
+
+   dotnet new console --force
+   (replace Program.cs with HivemindClient.cs)
+
+4. EDIT the following line in HivemindClient.cs:
+   const string serverIP = "127.0.0.1";
+
+   Replace with:
+   const string serverIP = "YOUR_SERVER_IP_HERE";
+
+5. Run the client:
+
+   dotnet run
+
+6. Type messages and press Enter.
+   Type /exit to quit.
+
+==============================
+ Notes
+==============================
+- The server console shows all messages (chat log) and connections.
+- Clients will see a live-updating terminal chat.
+- Works across OS: Windows, macOS, Linux
+
+Enjoy your Hivemind network chat!
