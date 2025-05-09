@@ -12,3 +12,17 @@ C:\code\Csharp\HivemindServer\HivemindServer\obj\Debug\net8.0\refint\HivemindSer
 C:\code\Csharp\HivemindServer\HivemindServer\obj\Debug\net8.0\HivemindServer.pdb
 C:\code\Csharp\HivemindServer\HivemindServer\obj\Debug\net8.0\HivemindServer.genruntimeconfig.cache
 C:\code\Csharp\HivemindServer\HivemindServer\obj\Debug\net8.0\ref\HivemindServer.dll
+C:\Users\Valued Customer\OneDrive\Desktop\Hivemind-prototype-main\HivemindServer\bin\Debug\net8.0\HivemindServer.exe
+C:\Users\Valued Customer\OneDrive\Desktop\Hivemind-prototype-main\HivemindServer\bin\Debug\net8.0\HivemindServer.deps.json
+C:\Users\Valued Customer\OneDrive\Desktop\Hivemind-prototype-main\HivemindServer\bin\Debug\net8.0\HivemindServer.runtimeconfig.json
+C:\Users\Valued Customer\OneDrive\Desktop\Hivemind-prototype-main\HivemindServer\bin\Debug\net8.0\HivemindServer.dll
+C:\Users\Valued Customer\OneDrive\Desktop\Hivemind-prototype-main\HivemindServer\bin\Debug\net8.0\HivemindServer.pdb
+C:\Users\Valued Customer\OneDrive\Desktop\Hivemind-prototype-main\HivemindServer\obj\Debug\net8.0\HivemindServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Valued Customer\OneDrive\Desktop\Hivemind-prototype-main\HivemindServer\obj\Debug\net8.0\HivemindServer.AssemblyInfoInputs.cache
+C:\Users\Valued Customer\OneDrive\Desktop\Hivemind-prototype-main\HivemindServer\obj\Debug\net8.0\HivemindServer.AssemblyInfo.cs
+C:\Users\Valued Customer\OneDrive\Desktop\Hivemind-prototype-main\HivemindServer\obj\Debug\net8.0\HivemindServer.csproj.CoreCompileInputs.cache
+C:\Users\Valued Customer\OneDrive\Desktop\Hivemind-prototype-main\HivemindServer\obj\Debug\net8.0\HivemindServer.dll
+C:\Users\Valued Customer\OneDrive\Desktop\Hivemind-prototype-main\HivemindServer\obj\Debug\net8.0\refint\HivemindServer.dll
+C:\Users\Valued Customer\OneDrive\Desktop\Hivemind-prototype-main\HivemindServer\obj\Debug\net8.0\HivemindServer.pdb
+C:\Users\Valued Customer\OneDrive\Desktop\Hivemind-prototype-main\HivemindServer\obj\Debug\net8.0\HivemindServer.genruntimeconfig.cache
+C:\Users\Valued Customer\OneDrive\Desktop\Hivemind-prototype-main\HivemindServer\obj\Debug\net8.0\ref\HivemindServer.dll

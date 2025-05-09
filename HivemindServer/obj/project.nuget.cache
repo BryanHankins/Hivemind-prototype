@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "yGWyLMZ4THs=",
+  "dgSpecHash": "uMAt6ExqdJs=",
   "success": true,
-  "projectFilePath": "C:\\code\\Csharp\\HivemindServer\\HivemindServer\\HivemindServer.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Valued Customer\\OneDrive\\Desktop\\Hivemind-prototype-main\\HivemindServer\\HivemindServer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Valued Customer\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.15\\microsoft.netcore.app.ref.8.0.15.nupkg.sha512",
+    "C:\\Users\\Valued Customer\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.15\\microsoft.windowsdesktop.app.ref.8.0.15.nupkg.sha512",
+    "C:\\Users\\Valued Customer\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.15\\microsoft.aspnetcore.app.ref.8.0.15.nupkg.sha512",
+    "C:\\Users\\Valued Customer\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.15\\microsoft.netcore.app.host.win-x64.8.0.15.nupkg.sha512"
+  ],
   "logs": []
 }

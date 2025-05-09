@@ -1,0 +1,102 @@
+============================
+Explanation: HivemindMain.cs
+============================
+
+Purpose:
+--------
+This C# program is a multi-client TCP chat server. Clients connect to the server,
+send messages, and receive messages from all other connected clients. The server
+manages all connections, message broadcasting, and displays a simple real-time console UI.
+
+============================
+Namespaces Used
+============================
+
+- System: Basic types like string, Console, etc.
+- System.Collections.Concurrent: Thread-safe collections like ConcurrentDictionary.
+- System.Net, System.Net.Sockets: TCP networking (IP addresses, sockets).
+- System.Text: Encoding support for strings to bytes.
+- System.Text.Json: Parsing and reading structured JSON messages.
+- System.Threading: Basic threading support.
+- System.Threading.Tasks: Async programming primitives.
+- System.Collections.Generic: Generic lists (chat log).
+
+============================
+Main Class: HivemindMain
+============================
+
+Fields:
+-------
+- clients: A thread-safe dictionary of all connected clients (ID -> TcpClient).
+- listener: A TcpListener that listens for new client connections on all IPs.
+- port: The port to listen on (5000).
+- clientCounter: A unique counter to assign IDs to clients.
+- cts: Used to cancel async loops safely.
+- chatLog: Stores the last 20 messages for display.
+- logLock: Synchronizes access to chatLog to avoid race conditions.
+
+============================
+Main Entry Point
+============================
+
+async Task Main()
+-----------------
+- Starts the server and begins listening on the specified port.
+- Spawns the RenderUI thread to constantly update the console.
+- Waits for new clients and assigns them unique IDs.
+- For each client, starts HandleClientAsync in its own task.
+
+============================
+Client Handling
+============================
+
+HandleClientAsync(TcpClient client, int clientId)
+--------------------------------------------------
+- Receives data from the client asynchronously.
+- Parses the data as JSON, expecting properties "user" and "msg".
+- Appends the message to the chat log.
+- Broadcasts the message to all other clients.
+- Handles client disconnect or error.
+- Removes the client from the list and cleans up.
+
+============================
+Broadcasting
+============================
+
+Broadcast(string jsonMessage, int senderId)
+-------------------------------------------
+- Sends the message to every other client except the sender.
+- Writes asynchronously to the TcpClient’s stream.
+- Removes clients that fail on send.
+
+============================
+Chat Log and UI
+============================
+
+AppendToLog(string message)
+---------------------------
+- Adds a message to the chat log.
+- Keeps the list at a max of 20 items for terminal display.
+
+RenderUI()
+----------
+- Runs in its own loop.
+- Clears the console and redraws all lines in the chat log every 500ms.
+- Shows "[SERVER MONITORING - Hivemind]" footer.
+- Uses a lock to avoid drawing while another thread writes.
+
+============================
+Thread Safety
+============================
+- All access to `chatLog` is synchronized with `lock`.
+- `clients` is a ConcurrentDictionary: no manual locking needed.
+- Separate threads/tasks handle UI, client I/O, and accepting connections.
+
+============================
+Program Flow Summary
+============================
+1. Start server → listen on port 5000.
+2. UI rendering starts.
+3. Accept clients → assign ID.
+4. Read data → decode JSON → add to log → broadcast.
+5. Remove disconnected clients.
