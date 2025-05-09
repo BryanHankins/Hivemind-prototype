@@ -8,10 +8,11 @@ using System.Collections.Generic;
 
 class HivemindClient
 {
-    const string serverIP = "172.59.82.242"; // <-- Update this to your server IP
-    const int port = 5000;
-    static TcpClient client;
-    static NetworkStream stream;
+    const string serverIP = "192.168.12.68";
+ // <-- Update this to your server IP
+  const int port = 5000;
+    static TcpClient? client;
+    static NetworkStream? stream;
     static bool running = true;
     static string username = "client" + new Random().Next(1000, 9999);
     static List<string> chatLog = new List<string>();
@@ -49,7 +50,7 @@ class HivemindClient
 
                     string json = JsonSerializer.Serialize(packet);
                     byte[] data = Encoding.UTF8.GetBytes(json);
-                    stream.Write(data, 0, data.Length);
+                    stream!.Write(data, 0, data.Length);
                     AppendToLog($"[You] {msg}");
                 }
 
@@ -72,13 +73,13 @@ class HivemindClient
         {
             try
             {
-                int byteCount = stream.Read(buffer, 0, buffer.Length);
+                int byteCount = stream!.Read(buffer, 0, buffer.Length);
                 if (byteCount == 0) break;
 
                 string json = Encoding.UTF8.GetString(buffer, 0, byteCount);
                 var message = JsonSerializer.Deserialize<JsonElement>(json);
-                string user = message.GetProperty("user").GetString();
-                string text = message.GetProperty("msg").GetString();
+                string user = message.GetProperty("user").GetString()!;
+                string text = message.GetProperty("msg").GetString()!;
                 AppendToLog($"[{user}] {text}");
             }
             catch
@@ -110,8 +111,7 @@ class HivemindClient
                 {
                     Console.WriteLine(line);
                 }
-                Console.WriteLine("
-[Type a message and press Enter - /exit to quit]");
+                Console.WriteLine("\n[Type a message and press Enter - /exit to quit]");
             }
             Thread.Sleep(500);
         }
